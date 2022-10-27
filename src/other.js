@@ -1,5 +1,6 @@
 import { sub } from "./_namespaces/ns";
 import * as sub2 from "./_namespaces/ns.sub";
+import { callme } from "./_namespaces/ns.sub";
 
 export function callViaReexport() {
     sub.callme();
@@ -10,5 +11,5 @@ export function callViaWildcard() {
 }
 
 export function callDirectly() {
-    sub.callme();
+    callme();
 }

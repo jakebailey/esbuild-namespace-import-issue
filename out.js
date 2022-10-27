@@ -22,7 +22,7 @@ function callViaWildcard() {
   callme();
 }
 function callDirectly() {
-  ns_sub_exports.callme();
+  callme();
 }
 
 // entrypoint.js

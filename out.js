@@ -31,3 +31,4 @@ callViaWildcard();
 callDirectly();
 ns_sub_exports.callme();
 callme();
+callme();

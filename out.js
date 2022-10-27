@@ -4,22 +4,30 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 
-// src/compiler/_namespaces/ts.sub.js
-var ts_sub_exports = {};
-__export(ts_sub_exports, {
+// src/_namespaces/ns.sub.js
+var ns_sub_exports = {};
+__export(ns_sub_exports, {
   callme: () => callme
 });
 
-// src/compiler/sub.js
+// src/sub.js
 function callme() {
 }
 
-// src/compiler/other.js
-function foo() {
-  ts_sub_exports.callme();
+// src/other.js
+function callViaReexport() {
+  ns_sub_exports.callme();
+}
+function callViaWildcard() {
+  callme();
+}
+function callDirectly() {
+  ns_sub_exports.callme();
 }
 
 // entrypoint.js
-foo();
+callViaReexport();
+callViaWildcard();
+callDirectly();
+ns_sub_exports.callme();
 callme();
-ts_sub_exports.callme();

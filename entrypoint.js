@@ -1,8 +1,9 @@
-import { foo, sub } from "./src/compiler/_namespaces/ts";
-import { callme } from "./src/compiler/sub";
+import { callDirectly, callViaReexport, callViaWildcard, sub } from "./src/_namespaces/ns";
+import * as sub2 from "./src/sub";
 
-foo();
-
-callme();
+callViaReexport();
+callViaWildcard();
+callDirectly();
 
 sub.callme();
+sub2.callme();

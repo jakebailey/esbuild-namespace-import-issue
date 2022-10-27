@@ -2,9 +2,10 @@
   "name": "esbuild-wildcard-example",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild --bundle --format=esm ./entrypoint.js --outfile=out.js"
   },
   "author": "",
   "license": "ISC",
